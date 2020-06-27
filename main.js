@@ -1,16 +1,24 @@
 //var jugadores = new array[40]();
 
+let salida = document.getElementById('salidaMarvelDC');
+let result = '';
 for (let x = 1; x < 40; x++) {
 	if (!(x % 3 == 0 || x % 5 == 0)) {
 		console.log(x);
+		result += x + `<br>`;
 	} else if (x % 3 == 0 && x % 5 == 0) {
-		console.log(' Marvel - DC');
+		console.log(' Marvel - DC <br>');
+		result += 'Marvel - DC <br>';
 	} else if (x % 3 == 0) {
 		console.log(' Marvel');
+		result += 'Marvel <br>';
 	} else if (x % 5 == 0) {
 		console.log(' DC');
+		result += 'DC <br>';
 	}
 }
+
+salida.innerHTML = result;
 
 var nums = [10, 80, 70, 44, 78, 5, 4];
 
@@ -55,4 +63,6 @@ function cambio(pos1, pos2) {
 	return [pos2, pos1];
 }
 
+let salida2 = document.getElementById('salidaBurbuja');
+salida2.innerHTML = nums;
 console.log(nums);
